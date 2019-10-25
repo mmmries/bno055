@@ -1,5 +1,5 @@
 defmodule BNO055.Registers.OprMode do
-  def addr, do: 0x3D
+  def addr, do: <<0x3D>>
 
   def encode(:CONFIGMODE), do: <<0>>
   def encode(:ACCONLY), do: <<1>>
