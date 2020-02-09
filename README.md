@@ -15,6 +15,14 @@ Here's a sample of basic usage:
 {:ok, {heading, pitch, yaw}} = BNO055.orientation(chip)
 ```
 
+## Physical Setup
+
+When installing the chip you should orient the chip so that the edge with 4 pins (ps0, ps1, int and adr) is facing forward, and the pins are pointing up.
+With the chip in this orientation you can now interpret the orientation data as follows:
+* heading of 180.0 is magnetic north, 0.0 or 360.0 is magnetic south
+* positive pitch means the nose is pointing up, negative is nose down
+* positive roll means rolling to the right, negative means rolling left
+
 ## Installation
 
 This package will be [available in Hex](https://hex.pm/docs/publish), the package can be installed
