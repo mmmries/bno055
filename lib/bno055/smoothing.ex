@@ -14,7 +14,7 @@ defmodule BNO055.Smoothing do
 
   defp append_and_drop(q, orientation) do
     q = :queue.in(orientation.heading, q)
-    if :queue.len(q) > 10 do
+    if :queue.len(q) > 20 do
       {_, q} = :queue.out(q)
       q
     else
